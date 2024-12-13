@@ -16,7 +16,7 @@ export const About = () => {
                     <StyledSpan>Years of experience. Specialised in building apps, while ensuring a seamless
                         web experience for end users.</StyledSpan>
                 </FlexWrapper>
-                <FlexWrapper padding={'58px 0'} margin={'0'} gap={'17px'}>
+                <FlexWrapper wrap='wrap' padding={'58px 0'} margin={'0'} gap={'17px'}>
                     <AboutCard iconId={'rulesAndPen'} width='42px' height='42px' viewBox="0 0 42 42" text={'UI & UX DESIGNING'} />
                     <AboutCard iconId={'webDevelopment'} width="57" height="57" viewBox="0 0 57 57" text={'WEB DEVELOPMENT'} />
                     <AboutCard iconId={'mobileDevelopment'} width="62" height="62" viewBox="0 0 62 62" text={'MOBILE DEVELOPMENT'} />
@@ -33,13 +33,6 @@ const StypedP = styled.p`
     font-size: 18px;
     color: #fff;
     max-width: 900px;
-`
-
-const StyledSpanSection = styled.p`
-    margin: 0;
-    display: flex;
-    gap: 22px;
-    align-items: center;
 `
 
 const StyledSpan = styled.span`

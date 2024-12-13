@@ -38,7 +38,6 @@ const StyledBanner = styled.div`
 `
 
 const StyledBannerInfo = styled.div`
-    margin: 0;
     display: flex;
     flex-direction: column;
     gap: 29px;
@@ -58,7 +57,6 @@ const StyledBannerInfo = styled.div`
 const StyledBannerimage = styled.div`
         width: 100%;
         min-height: 100%;
-        /* border: 1px solid red; */
         position: relative;
         overflow: hidden;
 

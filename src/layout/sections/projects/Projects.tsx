@@ -33,7 +33,7 @@ export const Projects = () => {
             <StyledProjects>
                 <Title title={'Featured projects:'} />
                 <StyledP>I have worked on many projects over the course of being a Web Developer, here are a few of my live, real-world projects</StyledP>
-                <FlexWrapper margin={'0'} padding={'36px 0 0 0'} gap={'17px'}>
+                <FlexWrapper wrap='wrap' margin={'0'} padding={'36px 0 0 0'} gap={'17px'}>
                     {
                         cards.map(elem => (
                             <ProjectCard src={elem.src} title={elem.title} text={elem.text}/>

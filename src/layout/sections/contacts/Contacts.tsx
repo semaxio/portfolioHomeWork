@@ -14,8 +14,7 @@ type InputType = {
 export const Contacts = () => {
 
     return (
-        <FlexWrapper margin={'0'} padding={'28px 136px 258px'}>
-            <StyledContacts>
+            <FlexWrapper justify='space-between' wrap='wrap' margin={'0'} padding={'28px 136px 258px'}>
                 <StyledSocial>
                     <Title title={'Connect with me:'} />
                     <StyledP>Satisfied with me? Please contact me</StyledP>
@@ -30,16 +29,9 @@ export const Contacts = () => {
                         <Button width={'174px'} height={'50px'} textValue={'Send'} bgColor={'#7562E0'} scale={'1.1'} />
                     </StyledForm>
                 </StyledFormContainer>
-            </StyledContacts>
-        </FlexWrapper>
+            </FlexWrapper>
     );
 };
-
-const StyledContacts = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-`
 
 const StyledSocial = styled.div`
     display: flex;

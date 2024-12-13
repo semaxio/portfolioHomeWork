@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 type FlexWrapperType = {
     direction?: string
+    justify?: string
     wrap?: string
     gap?: string
     alignItems?: string
@@ -11,6 +12,7 @@ type FlexWrapperType = {
 }
 
 export const FlexWrapper = styled.section<FlexWrapperType>`
+    justify-content: ${props => props.justify || null};
     display: flex;
     flex-direction: ${props => props.direction || 'row'};
     flex-wrap: ${props => props.wrap || 'nowrap'};
