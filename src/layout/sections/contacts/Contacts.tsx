@@ -14,52 +14,67 @@ type InputType = {
 export const Contacts = () => {
 
     return (
-            <FlexWrapper justify='space-between' wrap='wrap' margin={'0'} padding={'28px 136px 258px'}>
-                <StyledSocial>
-                    <Title title={'Connect with me:'} />
-                    <StyledP>Satisfied with me? Please contact me</StyledP>
-                    <SocialContainer />
-                </StyledSocial>
-                <StyledFormContainer>
-                    <StyledSpan>Contact me, let’s make magic together</StyledSpan>
-                    <StyledForm>
-                        <Input type="text" placeholder={'Name:'} height={'62px'}/>
-                        <Input type="text" placeholder={'Email:'} height={'62px'} />
-                        <Input type="textarea" placeholder={'Message:'} />
-                        <Button width={'174px'} height={'50px'} textValue={'Send'} bgColor={'#7562E0'} scale={'1.1'} />
-                    </StyledForm>
-                </StyledFormContainer>
-            </FlexWrapper>
+        <StyledContacts id="contact">
+            <StyledContainer>
+                <FlexWrapper width={'1120px'} wrap='wrap' margin={'0'} alignItems={'start'} gap={'250px'}>
+                    <StyledSocial>
+                        <Title title={'Connect with me:'} />
+                        <StyledP>Satisfied with me? Please contact me</StyledP>
+                        <SocialContainer />
+                    </StyledSocial>
+                    <StyledFormContainer>
+                            <StyledSpan>Contact me, let’s make magic together</StyledSpan>
+                            <Input type="text" placeholder={'Name:'} height={'62px'} />
+                            <Input type="text" placeholder={'Email:'} height={'62px'} />
+                            <Input type="textarea" placeholder={'Message:'} />
+                            <Button width={'174px'} height={'50px'} textValue={'Send'} bgColor={'#7562E0'} scale={'1.1'} />
+                    </StyledFormContainer>
+                </FlexWrapper>
+            </StyledContainer>
+        </StyledContacts>
+
     );
 };
 
+const StyledContacts = styled.section`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #1A1A29;
+`
+
+const StyledContainer = styled.div`
+    padding: 128px 0 258px;
+    width: 1360px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+`
+
+
 const StyledSocial = styled.div`
+    max-height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: start;
     gap: 24px;
 `
 
 const StyledP = styled.p`
-margin: 0;
+    margin: 0;
     font-size: 18px;
     color: #fff;
 `
 
 const StyledFormContainer = styled.div`
     display: flex;
+    gap: 16px;
     flex-direction: column;
-    padding: 0 100px;
 `
 const StyledSpan = styled.span`
     color: #fff;
     font-size: 24px;
-    margin-bottom: 24px;
-`
-
-const StyledForm = styled.form`
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    margin-bottom: 0;
 `
 
 const Input = styled.input<InputType>`

@@ -5,41 +5,55 @@ import { Navigation } from '../../components/navigation/Navigation';
 
 const navItems = [
     {
-        link: '/',
+        link: '#home',
         title: 'Home'
     },
     {
-        link: '/',
+        link: '#about',
         title: 'About me'
     },
     {
-        link: '/',
+        link: '#projects',
         title: 'Projects'
     },
     {
-        link: '/',
+        link: '#contact',
         title: 'Contact'
     },
 ]
 
 const Header = () => {
     return (
-        <StyledHeader>
-            <Logo />
-            <Navigation navItems={navItems} />
-        </StyledHeader>
+        <StyledContainer>
+            <StyledHeader>
+                <Logo />
+                <Navigation navItems={navItems} />
+            </StyledHeader>
+        </StyledContainer>
     );
 };
 
 export default Header;
 
 const StyledHeader = styled.header`
+    width: 100%;
+    max-width: 1120px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+`
+
+const StyledContainer = styled.div`
     height: 80px;
-    /* border: 1px solid red; */
-    padding: 0 160px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #181824;
 `
 
 

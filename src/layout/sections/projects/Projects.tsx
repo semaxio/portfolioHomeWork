@@ -29,25 +29,45 @@ const cards = [
 
 export const Projects = () => {
     return (
-        <FlexWrapper margin={'0'} gap={'36px'} padding={'60px 136px 100px'}>
-            <StyledProjects>
-                <Title title={'Featured projects:'} />
-                <StyledP>I have worked on many projects over the course of being a Web Developer, here are a few of my live, real-world projects</StyledP>
-                <FlexWrapper wrap='wrap' margin={'0'} padding={'36px 0 0 0'} gap={'17px'}>
-                    {
-                        cards.map(elem => (
-                            <ProjectCard src={elem.src} title={elem.title} text={elem.text}/>
-                        ))
-                    }
+        <StyledProjects id="projects">
+            <StyledContainer>
+                <FlexWrapper width={'1120px'} margin={'0'} gap={'36px'} padding={'0'}>
+                    <StyledProjectsItems>
+                        <Title title={'Featured projects:'} />
+                        <StyledP>I have worked on many projects over the course of being a Web Developer, here are a few of my live, real-world projects</StyledP>
+                        <FlexWrapper wrap='wrap' margin={'0'} padding={'36px 0 0 0'} gap={'17px'}>
+                            {
+                                cards.map(elem => (
+                                    <ProjectCard src={elem.src} title={elem.title} text={elem.text} />
+                                ))
+                            }
+                        </FlexWrapper>
+                    </StyledProjectsItems>
                 </FlexWrapper>
-            </StyledProjects>
-        </FlexWrapper>
+            </StyledContainer>
+        </StyledProjects>
+
 
     );
 };
 
 
-const StyledProjects = styled.div`
+const StyledProjects = styled.section`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #1A1A29;
+`
+
+const StyledContainer = styled.div`
+    max-width: 100%;
+    width: 1360px;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0 0;
+`
+
+const StyledProjectsItems = styled.div`
     
 `
 

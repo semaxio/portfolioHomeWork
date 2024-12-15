@@ -63,22 +63,41 @@ const cards = [
 
 export const Services = () => {
     return (
-        <FlexWrapper direction={'column'} margin={'0'} alignItems={'left'} wrap='wrap' gap='32px'>
-            <Title title={'The services i offer:'} />
-            <FlexWrapper margin={'0'}  wrap='wrap' padding={'0'} gap='22px'>
-                {cards.map(elem => (
-                    <ServicesCard
-                        bordered={elem.bordered}
-                        iconId={elem.iconId}
-                        iconHeight={elem.iconHeight}
-                        iconWidth={elem.iconWidth}
-                        iconView={elem.iconView}
-                        title={elem.title}
-                        text={elem.text}
-                    />
-                ))}
-            </FlexWrapper>
-        </FlexWrapper>
+        <StyledServices>
+            <StyledContainer>
+                <FlexWrapper width={'1120px'} direction={'column'} margin={'0'} alignItems={'left'} wrap='wrap' gap='32px'>
+                    <Title title={'The services i offer:'} />
+                    <FlexWrapper margin={'0'} wrap='wrap' padding={'0'} gap='22px'>
+                        {cards.map(elem => (
+                            <ServicesCard
+                                bordered={elem.bordered}
+                                iconId={elem.iconId}
+                                iconHeight={elem.iconHeight}
+                                iconWidth={elem.iconWidth}
+                                iconView={elem.iconView}
+                                title={elem.title}
+                                text={elem.text}
+                            />
+                        ))}
+                    </FlexWrapper>
+                </FlexWrapper>
+            </StyledContainer>
+        </StyledServices>
+
     );
 };
 
+const StyledServices = styled.section`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #1A1A29;
+`
+
+const StyledContainer = styled.div`
+    max-width: 100%;
+    width: 1360px;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0 0;
+`

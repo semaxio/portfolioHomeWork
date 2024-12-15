@@ -9,7 +9,7 @@ import { Contacts } from './layout/sections/contacts/Contacts';
 
 function App() {
     return (
-        <StyledApp className="App">
+        <StyledApp className="App" id="home">
             <Header />
             <Banner/>
             <About/>
@@ -23,7 +23,6 @@ function App() {
 const StyledApp = styled.div`
     min-height: 100vh;
     width: 100%;
-    max-width: 1360px;
     background-color: #181824;
 `
 

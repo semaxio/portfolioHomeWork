@@ -7,34 +7,43 @@ import avatar from '../../../assets/images/avatar-edit.png'
 export const Banner = () => {
     return (
         <StyledBanner>
-            <StyledBannerInfo>
-                <StyledBannerInfoTitle>
-                    <span style={{ fontSize: '32px' }}>Hello, i’m</span>
-                    <span style={{ fontSize: '52px' }}>Jayjay D. Dinero</span>
-                </StyledBannerInfoTitle>
-                <p style={{ fontSize: '18px' }}>Freelance UI designer, Fullstack developer, & Data Miner. I create seamless web experiences for end-users.</p>
-                <StyledButtonGroup>
-                    <Button width='160px' height='48px' textValue={'About me'} iconId='buttonUser' iconViewBox='0 0 20 20' iconWidth='20px' iconHeight='20px' />
-                    <Button width='160px' height='48px' textValue={'Projects'} iconId='buttonEye' iconViewBox='0 0 21 16' iconWidth='18px' iconHeight='16px' />
-                </StyledButtonGroup>
-            </StyledBannerInfo>
-            <StyledBannerimage>
-                <Icon iconId='elipse' width='486px' height='486px' viewBox='0 0 486 486' />
-                <Image src={avatar} alt="photo" />
-            </StyledBannerimage>
+            <StyledContainer>
+                <StyledBannerInfo>
+                    <StyledBannerInfoTitle>
+                        <span style={{ fontSize: '32px' }}>Hello, i’m</span>
+                        <span style={{ fontSize: '52px' }}>Jayjay D. Dinero</span>
+                    </StyledBannerInfoTitle>
+                    <p style={{ fontSize: '18px' }}>Freelance UI designer, Fullstack developer, & Data Miner. I create seamless web experiences for end-users.</p>
+                    <StyledButtonGroup>
+                        <Button width='160px' height='48px' textValue={'About me'} iconId='buttonUser' iconViewBox='0 0 20 20' iconWidth='20px' iconHeight='20px' />
+                        <Button width='160px' height='48px' textValue={'Projects'} iconId='buttonEye' iconViewBox='0 0 21 16' iconWidth='18px' iconHeight='16px' />
+                    </StyledButtonGroup>
+                </StyledBannerInfo>
+                <StyledBannerimage>
+                    <Icon iconId='elipse' width='486px' height='486px' viewBox='0 0 486 486' />
+                    <Image src={avatar} alt="photo" />
+                </StyledBannerimage>
+            </StyledContainer>
         </StyledBanner>
     );
 };
 
 
-const StyledBanner = styled.div`
-    margin: 0 auto;
-    padding: 0 0 0 136px;
+const StyledBanner = styled.section`
+    width: 100%;
     background-color: #1A1A29;
     min-height: 30%;
     height: 561px;
     color: #fff;
     display: flex;
+    justify-content: center;
+`
+
+const StyledContainer = styled.div`
+    max-width: 100%;
+    width: 1360px;
+    display: flex;
+    width: 1120px;
 `
 
 const StyledBannerInfo = styled.div`
@@ -43,7 +52,6 @@ const StyledBannerInfo = styled.div`
     gap: 29px;
     min-width: 460px;
     padding-top: 209px;
-    /* border: 1px solid red; */
     span {
         margin: 0;
         display: block;
@@ -63,7 +71,7 @@ const StyledBannerimage = styled.div`
         svg {
             position: absolute;
             top: 205px;
-            right: 140px;
+            right: 0;
             z-index: 1;
         }
 `
@@ -83,6 +91,6 @@ const Image = styled.img`
     /* object-fit: cover; */
     position: absolute;
     z-index: 2;
-    right: 144px;
+    right: 0;
     bottom: 0;
 `
